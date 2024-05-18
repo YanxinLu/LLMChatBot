@@ -13,6 +13,8 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 
+import re
+
 
 class LangchainChatbot:
     def __init__(self,
@@ -68,15 +70,18 @@ class LangchainChatbot:
         return self.llm_chain.predict(human_input=human_input)
 
     def retrieve_by_retriever(self, query):
-        return '\n'.join(dict(result)['page_content'] for result in self.retriever.invoke(query))
+        return '\n'.join(re.sub('\n+', '\n', dict(result)['page_content']) for result in self.retriever.invoke(query))
 
     def retrieve_by_memory(self, keyword):
         return [msg.content for msg in self.memory.chat_memory.messages if keyword in msg.content]
 
 
 if __name__ == "__main__":
-    Chatbot = LangchainChatbot(api_key='your_api_key',
-                               model_name_or_path='gemini-pro')
-    Chatbot.set_retriever_url("https://github.com/OptimalScale/LMFlow/blob/main/README.md")
-    print(Chatbot.chat_with_chatbot("What is LMFlow?"))
-
+    model = 'gemini-pro'
+    Chatbot = LangchainChatbot(api_key='your-api-key',
+                               model_name_or_path=model)
+    Chatbot.set_retriever_url("https://optimalscale.github.io/LMFlow/")
+    Chatbot.chat_with_chatbot("What is LMFlow?")
+    Chatbot.chat_with_chatbot("How can I fine-tune models using LMFlow?")
+    with open(f"chat_result/{model}.txt", 'w') as file:
+        file.write(str(Chatbot.memory.chat_memory))

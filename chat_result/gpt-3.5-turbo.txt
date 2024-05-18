@@ -1,0 +1,99 @@
+Human: What is LMFlow?
+Web Retriever: LMFlow ¡ª LMFlow  documentation
+Skip to main content
+Ctrl+K
+We've released our memory-efficient finetuning algorithm LISA, check out [Paper][User Guide] for more details!
+LMFlow
+                        Blogs
+                      
+                        Examples
+                      
+                        API Reference
+                      
+                        About
+Blogs
+                      
+                        Examples
+                      
+                        API Reference
+                      
+                        About
+                      
+LMFlow#
+An extensible, convenient, and efficient toolbox for finetuning large machine learning models, designed to be user-friendly, speedy and reliable, and accessible to the entire community.
+Citation#
+@misc{lmflow,
+  author = {Shizhe Diao and Rui Pan and Hanze Dong and KaShun Shum and Jipeng Zhang and Wei Xiong and Tong Zhang},
+  title = {LMFlow: An Extensible Toolkit for Finetuning and Inference of Large Foundation Models},
+  year = {2023},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://optimalscale.github.io/LMFlow/}},
+}
+Installation#
+This package can be be installed from sources with the following command:
+git clone https://github.com/OptimalScale/LMFlow.git
+conda create -n lmflow python=3.9 -y
+conda activate lmflow
+conda install mpi4py
+pip install -e .
+Checkpoints#
+We have prepared tuned LLaMA model (both task and instruction tuning).
+Refer to README.
+Content#
+Blogs
+Examples
+Data preparation
+Finetuning
+Inference
+Evaluation
+API Reference
+lmflow
+About
+Changelog
+Contributors
+AI: LMFlow is an extensible, convenient, and efficient toolbox for finetuning large machine learning models. It is designed to be user-friendly, speedy, reliable, and accessible to the entire community. You can find more information, examples, and API references on the LMFlow documentation website.
+Human: How can I fine-tune models using LMFlow?
+Web Retriever: Citation#
+@misc{lmflow,
+  author = {Shizhe Diao and Rui Pan and Hanze Dong and KaShun Shum and Jipeng Zhang and Wei Xiong and Tong Zhang},
+  title = {LMFlow: An Extensible Toolkit for Finetuning and Inference of Large Foundation Models},
+  year = {2023},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://optimalscale.github.io/LMFlow/}},
+}
+Blogs
+                      
+                        Examples
+                      
+                        API Reference
+                      
+                        About
+                      
+LMFlow#
+An extensible, convenient, and efficient toolbox for finetuning large machine learning models, designed to be user-friendly, speedy and reliable, and accessible to the entire community.
+the process of fine-tuning and inference of publicly available foundation models to maximize their effectiveness.
+Installation#
+This package can be be installed from sources with the following command:
+git clone https://github.com/OptimalScale/LMFlow.git
+conda create -n lmflow python=3.9 -y
+conda activate lmflow
+conda install mpi4py
+pip install -e .
+Checkpoints#
+We have prepared tuned LLaMA model (both task and instruction tuning).
+Refer to README.
+Content#
+Blogs
+Examples
+Data preparation
+Finetuning
+Inference
+Evaluation
+API Reference
+lmflow
+About
+Changelog
+Contributors
+AI: To fine-tune models using LMFlow, you can follow the installation instructions provided on the LMFlow documentation website. After installation, you can use the toolbox to prepare your data, fine-tune your models, perform inference, and evaluate the results. Make sure to refer to the examples and API references for guidance on how to effectively use LMFlow for your machine learning tasks.
