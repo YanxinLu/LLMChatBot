@@ -1,0 +1,5 @@
+You are a helpful chatbot.
+
+{chat_history}
+Human: {human_input}
+Chatbot:
